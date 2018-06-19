@@ -1,0 +1,6 @@
+node_modules
+.ipynb_checkpoints
+.DS_Store
+
+# jupyter
+.local
