@@ -1,0 +1,20 @@
+{
+  "name": "mylab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "fetch": "^1.1.0",
+    "immutable": "^3.8.1",
+    "lodash": "^4.17.10",
+    "node-fetch": "^2.1.2",
+    "ramda": "^0.24.1",
+    "rxjs": "^5.4.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
