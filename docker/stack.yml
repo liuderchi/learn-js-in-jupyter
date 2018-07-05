@@ -6,4 +6,4 @@ services:
         ports:
             - "8888"
         volumes:
-            - /root:/root
+            - ./:/root/host
