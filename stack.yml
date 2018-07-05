@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  jupyter:
+    container_name: web
+    image: liuderchi/jupyter-nodejs
+    ports:
+      - "8888"
+    volumes:
+      - sharedVolume:/root/learn-js-in-jupyter
+  notebooks:
+    image: liuderchi/learn-js-in-jupyter
+    volumes:
+      - sharedVolume:/home/learn-js-in-jupyter
+volumes:
+  sharedVolume: {}
