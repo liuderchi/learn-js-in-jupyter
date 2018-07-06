@@ -11,6 +11,6 @@ services:
   notebooks:
     image: liuderchi/learn-js-in-jupyter
     volumes:
-      - sharedVolume:/learn-js-in-jupyter
+      - sharedVolume:/home/learn-js-in-jupyter
 volumes:
   sharedVolume: {}
