@@ -2,8 +2,15 @@ version: '3'
 
 services:
     web:
+        container_name: web
         image: liuderchi/jupyter-nodejs
         ports:
             - "8888"
         volumes:
-            - ./:/root/host
+            - datavolume:/root/learn-js-in-jupyter
+    notes:
+        image: liuderchi/learn-js-in-jupyter:test
+        volumes:
+            - datavolume:/learn-js-in-jupyter
+volumes:
+  datavolume: {}
