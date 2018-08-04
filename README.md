@@ -9,11 +9,11 @@ An interactive JS notebook powered by [`jupyter-nodejs`][jupyter-nodejs-link]
 
 1. Click [![Try in PWD][try-pwd-img]][try-pwd-link] to launch a new container. After the stack builder is finished, close the dialog.
 
-2. In the terminal of page run shell command:
+2. Get Access Token by running shell command in the terminal prompt:
 
   ```sh
   # print jupyter token
-  $ docker logs $(docker container list | awk 'FNR==2{print $1}') 2>&1 | grep -E 'token=(.*)&' -o | cut -c7-54
+  $ docker logs $(docker container list | awk 'FNR==2{print $1}') 2>&1 | grep -E 'token=(.*)' -o | cut -c7-54
   ```
 
 3. Click the link above to access Jupyter page:
