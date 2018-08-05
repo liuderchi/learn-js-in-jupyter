@@ -1,6 +1,6 @@
 version: '3'
 
-services:
+services:  # play with docker config
   jupyter:
     container_name: web
     image: liuderchi/jupyter-nodejs

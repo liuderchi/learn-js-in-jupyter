@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "clearCellOutput": "./clearCellOutput.js",
-    "prettier:code-cell": "./prettierCodeCell.js",
+    "clearCellOutput": "./utils/clearCellOutput.js",
+    "prettier:code-cell": "./utils/prettierCodeCell.js",
     "precommit": "lint-staged"
   },
   "repository": {
