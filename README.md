@@ -27,7 +27,10 @@ An interactive JS notebook powered by [`jupyter-nodejs`][jupyter-nodejs-link]
 ```sh
 $ git clone https://github.com/liuderchi/learn-js-in-jupyter.git
 $ cd learn-js-in-jupyter
-$ docker run -d -p 8888:8888 -v $PWD/notebooks:/root/notebooks --name learn-js-in-jupyter liuderchi/jupyter-nodejs:latest
+$ docker run -d -p 8888:8888 \
+  -v $PWD/notebooks:/root/notebooks \
+  -v $PWD/jupyterlab-settings:/root/.jupyter/lab/user-settings/@jupyterlab \
+  liuderchi/jupyterlab-ijavascript:latest
 # print jupyter token
 $ docker logs learn-js-in-jupyter 2>&1 | grep -E 'token=(.*)' -o | cut -c7-54
 ```
