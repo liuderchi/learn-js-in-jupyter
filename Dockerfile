@@ -13,4 +13,5 @@ LABEL maintainer="TE-CHI LIU"
 ENV PROJ_ROOT learn-js-in-jupyter
 
 COPY --from=build-env /$PROJ_ROOT /home/$PROJ_ROOT
+# TODO copy jupyterlab-config/notebookConfig.json
 WORKDIR /home/$PROJ_ROOT
