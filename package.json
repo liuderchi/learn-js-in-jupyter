@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "clearCellOutput": "./utils/clearCellOutput.js",
     "prettier:code-cell": "./utils/prettierCodeCell.js",
+    "prettier:settings": "prettier --parser=json --write jupyterlab-settings/**/*.jupyterlab-settings",
     "precommit": "lint-staged"
   },
   "repository": {
@@ -24,6 +25,10 @@
     "*.ipynb": [
       "npm run clearCellOutput",
       "npm run prettier:code-cell",
+      "git add"
+    ],
+    "*.jupyterlab-settings": [
+      "prettier --parser=json --write",
       "git add"
     ]
   },
