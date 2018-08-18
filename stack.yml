@@ -3,14 +3,17 @@ version: '3'
 services:
   jupyter:
     container_name: web
-    image: liuderchi/jupyter-nodejs
+    image: liuderchi/jupyterlab-ijavascript
     ports:
       - "8888"
     volumes:
       - sharedVolume:/root/learn-js-in-jupyter
+      - settingsVolume:/root/.jupyter/lab/user-settings/@jupyterlab
   notebooks:
     image: liuderchi/learn-js-in-jupyter
     volumes:
       - sharedVolume:/home/learn-js-in-jupyter
+      - settingsVolume:/home/jupyterlab-settings
 volumes:
   sharedVolume: {}
+  settingsVolume: {}

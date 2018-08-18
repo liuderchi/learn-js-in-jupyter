@@ -1,5 +1,4 @@
 {
-  "$target": "$HOME/.jupyter/lab/user-settings/@jupyterlab/notebook-extension/tracker.jupyterlab-settings",
   "codeCellConfig": {
     "fontFamily": "Fira Code",
     "fontSize": 14,

@@ -11,7 +11,8 @@ FROM alpine
 LABEL maintainer="TE-CHI LIU"
 
 ENV PROJ_ROOT learn-js-in-jupyter
+ENV JUPYTERLAB_SETTINGS_FOLDER jupyterlab-settings
 
 COPY --from=build-env /$PROJ_ROOT /home/$PROJ_ROOT
-# TODO copy jupyterlab-config/notebookConfig.json
+ADD $JUPYTERLAB_SETTINGS_FOLDER /home/$JUPYTERLAB_SETTINGS_FOLDER
 WORKDIR /home/$PROJ_ROOT
