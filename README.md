@@ -1,7 +1,10 @@
 # Learn JS in Jupyter
 
-An interactive JS notebook powered by [`jupyter-nodejs`][jupyter-nodejs-link]
+[![dockerpulls-badge][dockerpulls-img]][jupyterlab-ijavascript] [![microbadger-badge][microbadger-img]][microbadger-link]
 
+An interactive JS notebook powered by [`jupyter-nodejs`][jupyter-nodejs-link], [`ijavascript`][ijavascript-link] and [`jupyterlab`][jupyterlab-link]
+
+This is a fantastic tool for teaching and learning since it [runs in a docker container][jupyterlab-ijavascript].
 
 ## Getting Started
 
@@ -43,7 +46,13 @@ in browser go to `localhost:8888?token=PASTE_JUPYTER_TOKEN_HERE`
 [MIT License][mit-license]
 
 
+[microbadger-img]: https://images.microbadger.com/badges/image/liuderchi/jupyterlab-ijavascript.svg
+[microbadger-link]: https://microbadger.com/images/liuderchi/jupyterlab-ijavascript
+[dockerpulls-img]: https://badgen.net/docker/pulls/liuderchi/jupyterlab-ijavascript
+[jupyterlab-ijavascript]: https://hub.docker.com/r/liuderchi/jupyterlab-ijavascript/
 [jupyter-nodejs-link]: https://github.com/notablemind/jupyter-nodejs
+[ijavascript-link]: https://github.com/n-riesco/ijavascript
+[jupyterlab-link]: https://github.com/jupyterlab/jupyterlab
 [pwd-link]: https://labs.play-with-docker.com/
 [try-pwd-img]: https://cdn.rawgit.com/play-with-docker/stacks/cff22438/assets/images/button.png
 [try-pwd-link]: http://play-with-docker.com?stack=https://raw.githubusercontent.com/liuderchi/learn-js-in-jupyter/master/stack.yml
