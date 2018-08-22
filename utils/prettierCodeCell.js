@@ -27,8 +27,14 @@ glob('**/*.ipynb', null, function(err, files) {
   }
   try {
     files.forEach(file => {
-      process.stdout.write(`cleaning up ${file} ... `);
+      process.stdout.write(`Prettiering ${file} ... `);
       const contentString = fs.readFileSync(file, 'utf8');
+      if (
+        JSON.parse(contentString).metadata.kernelspec.language !== 'javascript'
+      ) {
+        process.stdout.write('ignore\n');
+        return;
+      }
       const resultString = prettierCodeCell(contentString);
       fs.writeFileSync(file, resultString, 'utf8');
       process.stdout.write('done\n');
