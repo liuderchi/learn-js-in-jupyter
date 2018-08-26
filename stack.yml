@@ -10,7 +10,7 @@ services:
       - sharedVolume:/root/learn-js-in-jupyter
       - settingsVolume:/root/.jupyter/lab/user-settings/@jupyterlab
   notebooks:
-    image: liuderchi/learn-js-in-jupyter
+    image: liuderchi/learn-js-in-jupyter:notebooks-only
     volumes:
       - sharedVolume:/home/learn-js-in-jupyter
       - settingsVolume:/home/jupyterlab-settings
