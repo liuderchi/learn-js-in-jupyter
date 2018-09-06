@@ -1,8 +1,9 @@
-**/.DS_Store
+.DS_Store
 
-**/.gitignore
-**/.git
+.git
+.gitignore
 
-**/node_modules
+node_modules
 
-**/.ipynb_checkpoints
+.ipynb_checkpoints
+.local
