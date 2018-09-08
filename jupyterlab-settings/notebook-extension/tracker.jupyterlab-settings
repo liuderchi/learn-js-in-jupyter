@@ -1,10 +1,10 @@
 {
   "codeCellConfig": {
-    "fontFamily": "Fira Code",
+    "fontFamily": "'Fira Code', monospace",
     "fontSize": 14,
     "lineHeight": 1.5,
     "lineNumbers": true,
     "lineWrap": "on",
-    "tabSize": 4
+    "tabSize": 2
   }
 }
