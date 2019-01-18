@@ -1,11 +1,18 @@
 version: '3'
 
 services:
+  entryPoint:
+    container_name: entry
+    image: tbd/get-token-then-redirects-to-jupyter
+    ports:
+      - "9000"
+    env:
+      targetPort: 8888
   jupyter:
     container_name: web
     image: liuderchi/jupyterlab-ijavascript
-    ports:
-      - "8888"
+    # ports:
+    #   - "8888"
     volumes:
       - sharedVolume:/root/learn-js-in-jupyter
       - settingsVolume:/root/.jupyter/lab/user-settings/@jupyterlab
