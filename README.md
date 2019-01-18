@@ -19,8 +19,8 @@ Powered by Awesome [JupyterLab][jupyterlab] and docker 🐳 . Fun to use; Easy t
 2. Get Access Token by running this command in the terminal prompt:
 
   ```sh
-  docker logs $(docker container list | awk 'FNR==2{print $1}') 2>&1 \
-    | grep -E 'token=(.*)' -o | cut -c7-54
+  docker exec $(docker container list | awk 'FNR==2{print $1}') sh -c 'jupyter notebook list' \
+    | awk 'FNR==2{print $1}' | grep -E 'token=(.*)' -o | cut -c7-54
   ```
 
 3. Click the link above to access Jupyter page:
@@ -49,12 +49,17 @@ Powered by Awesome [JupyterLab][jupyterlab] and docker 🐳 . Fun to use; Easy t
 2. Run following command to get Jupyter token. Then Copy it.
 
   ```bash
-  docker logs $(docker container list | awk 'FNR==2{print $1}') 2>&1 \
-      | grep -E 'token=(.*)' -o | cut -c7-54
+  docker exec $(docker container list | awk 'FNR==2{print $1}') sh -c 'jupyter notebook list' \
+      | awk 'FNR==2{print $1}' | grep -E 'token=(.*)' -o | cut -c7-54
   ```
 
 3. In browser go to `localhost:8888?token=PASTE_JUPYTER_TOKEN_HERE`
 
+
+> Alternatively, use this One Liner for step 2 and step 3:
+> ```bash
+> python -mwebbrowser $(docker exec $(docker container list | awk 'FNR==2{print $1}') sh -c 'jupyter notebook list' | awk 'FNR==2{print $1}')
+> ```
 
 ### Running and Saving Changes Locally
 
@@ -66,12 +71,10 @@ $ docker run -d -p 8888:8888 \
   -v $PWD/jupyterlab-settings:/root/.jupyter/lab/user-settings/@jupyterlab \
   liuderchi/learn-js-in-jupyter:latest
 
-# print jupyter token
-$ docker logs $(docker container list | awk 'FNR==2{print $1}') 2>&1 \
-    | grep -E 'token=(.*)' -o | cut -c7-54
+# open in browser with token in url
+$ python -mwebbrowser $(docker exec $(docker container list | awk 'FNR==2{print $1}') \
+  sh -c 'jupyter notebook list' | awk 'FNR==2{print $1}')
 ```
-
-in browser go to `localhost:8888?token=PASTE_JUPYTER_TOKEN_HERE`
 
 
 ## License
